@@ -1,8 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import HomeScreen from '../screens/HomeScreen';
 import LandingScreen from '../screens/LandingScreen';
-import HomeScreen from '../screens/HomeScrees';
 import Constants from '../res/Constants';
+import DisplayScreen from '../screens/DisplayScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,10 @@ const MainStackNavigator = () => {
         <Stack.Screen
           name={Constants.routeNames.homeScreen}
           component={HomeScreen}
+        />
+        <Stack.Screen
+          name={Constants.routeNames.displayScreen}
+          component={DisplayScreen}
         />
       </Stack.Navigator>
     );

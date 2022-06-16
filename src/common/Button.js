@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Pressable} from 'react-native';
 import Colors from '../res/Colors';
+import Dimen from '../res/Dimen';
 import Text from './Text';
 
 const Button = ({title, onPress, titleStyles, buttonStyle, disabled}) => {
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
-    width: '85%',
+    width: Dimen.phoneWidth * 0.9,
     borderRadius: 10,
   },
 });

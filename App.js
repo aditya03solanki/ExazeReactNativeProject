@@ -12,17 +12,18 @@ import {
 import {Provider} from 'react-redux';
 import NavApp from './src/navigation/MainStackNavigator';
 import NavigationService from './src/navigation/NavigationService';
+import {store} from './src/redux/store';
 
 const App = () => {
   return (
-    // <Provider>
-    <NavigationContainer
-      ref={navigatorRef => {
-        NavigationService.setTopLevelNavigator(navigatorRef);
-      }}>
-      <NavApp />
-    </NavigationContainer>
-    // </Provider>
+    <Provider store={store}>
+      <NavigationContainer
+        ref={navigatorRef => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}>
+        <NavApp />
+      </NavigationContainer>
+    </Provider>
   );
 };
 
