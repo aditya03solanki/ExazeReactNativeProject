@@ -1,3 +1,4 @@
+//@flow
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, TextInput, NativeModules} from 'react-native';
 import NavigationService from '../navigation/NavigationService';
