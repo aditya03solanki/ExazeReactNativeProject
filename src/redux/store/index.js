@@ -6,6 +6,9 @@ const rootReducer = combineReducers({
   UserDetail,
 });
 
+// using thunk middleware....
+// let store = createStore(rootReducer, applyMiddleware(thunk));
+
 let store = configureStore({reducer: rootReducer});
 
 export {store};
