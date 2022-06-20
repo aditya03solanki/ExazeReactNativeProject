@@ -12,12 +12,20 @@ import Constants from '../res/Constants';
 
 const {NativeBridgeModule} = NativeModules;
 
+type reduxstate = {
+  name: string,
+  email: string,
+  userName: string,
+};
+
 const LandingScreen: () => Node = () => {
   const [inputName, setInputName] = useState('');
   const [inputUserName, setInputUserName] = useState('');
   const [inputemail, setInputEmail] = useState('');
   const [toastMessage, setToastMessage] = useState('');
-  const {name, email, userName} = useSelector(state => state.UserDetail);
+  const {name, email, userName}: reduxstate = useSelector(
+    state => state.UserDetail,
+  );
 
   const dispatch = useDispatch();
 

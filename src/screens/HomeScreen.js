@@ -10,12 +10,12 @@ import NavigationService from '../navigation/NavigationService';
 import Colors from '../res/Colors';
 import Constants from '../res/Constants';
 
-type ReduxState = {
-  name: String,
+type reduxstate = {
+  name: string,
 };
 
 const HomeScreen: () => Node = () => {
-  const {name} = useSelector(state => state.UserDetail);
+  const {name}: reduxstate = useSelector(state => state.UserDetail);
   return (
     <View style={{flex: 1, backgroundColor: '#1a1924'}}>
       <Text style={styles.title}>Hi, {name}</Text>

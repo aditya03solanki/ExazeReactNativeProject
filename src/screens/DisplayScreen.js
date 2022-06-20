@@ -9,8 +9,16 @@ import NavigationService from '../navigation/NavigationService';
 import Colors from '../res/Colors';
 import Constants from '../res/Constants';
 
+type reduxstate = {
+  name: string,
+  email: string,
+  userName: string,
+};
+
 const DisplayScreen: () => Node = () => {
-  const {name, email, userName} = useSelector(state => state.UserDetail);
+  const {name, email, userName}: reduxstate = useSelector(
+    state => state.UserDetail,
+  );
   return (
     <View style={{flex: 1, backgroundColor: '#1a1924'}}>
       <Text style={styles.title}>Hi, {name}</Text>
