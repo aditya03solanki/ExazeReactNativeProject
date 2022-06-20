@@ -1,5 +1,6 @@
 //@flow
 import React, {useEffect, useState} from 'react';
+import type {Node} from 'react';
 import {View, Text, StyleSheet, TextInput, NativeModules} from 'react-native';
 import NavigationService from '../navigation/NavigationService';
 import Dimen from '../res/Dimen';
@@ -11,7 +12,7 @@ import Constants from '../res/Constants';
 
 const {NativeBridgeModule} = NativeModules;
 
-const LandingScreen = props => {
+const LandingScreen: () => Node = () => {
   const [inputName, setInputName] = useState('');
   const [inputUserName, setInputUserName] = useState('');
   const [inputemail, setInputEmail] = useState('');

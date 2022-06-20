@@ -1,4 +1,6 @@
+//@flow
 import React from 'react';
+import type {Node} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import Button from '../common/Button';
@@ -8,8 +10,12 @@ import NavigationService from '../navigation/NavigationService';
 import Colors from '../res/Colors';
 import Constants from '../res/Constants';
 
-const HomeScreen = () => {
-  const {name, email, userName} = useSelector(state => state.UserDetail);
+type ReduxState = {
+  name: String,
+};
+
+const HomeScreen: () => Node = () => {
+  const {name} = useSelector(state => state.UserDetail);
   return (
     <View style={{flex: 1, backgroundColor: '#1a1924'}}>
       <Text style={styles.title}>Hi, {name}</Text>

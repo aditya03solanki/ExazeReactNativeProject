@@ -1,14 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Provider} from 'react-redux';
 import NavApp from './src/navigation/MainStackNavigator';
 import NavigationService from './src/navigation/NavigationService';

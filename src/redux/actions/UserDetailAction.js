@@ -1,7 +1,13 @@
+//@flow
 import {SET_USER_DETAIL} from './types';
 
-export const setDetail = obj => {
-  console.log('action called');
+type ActionParam = {
+  name: string,
+  email: string,
+  userName: string,
+};
+
+export const setDetail = (obj: ActionParam) => {
   return {
     type: SET_USER_DETAIL,
     data: obj,

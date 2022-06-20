@@ -1,4 +1,12 @@
+//@flow
+import type {Node} from 'react';
 import {SET_USER_DETAIL} from '../actions/types';
+
+type ReduxState = {
+  name: string,
+  email: string,
+  userName: string,
+};
 
 const initialState = {
   name: '',
@@ -6,10 +14,14 @@ const initialState = {
   email: '',
 };
 
-const UserDetailReducer = (state = initialState, action) => {
+type Action = {type: string, data: Object};
+
+const UserDetailReducer = (
+  state: ReduxState = initialState,
+  action: Action,
+) => {
   switch (action.type) {
     case SET_USER_DETAIL: {
-      console.log('inside reducer');
       return {
         ...state,
         name: action.data.name,
