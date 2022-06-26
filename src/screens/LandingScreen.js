@@ -1,6 +1,5 @@
 //@flow
 import React, {useEffect, useState} from 'react';
-import type {Node} from 'react';
 import {View, Text, StyleSheet, TextInput, NativeModules} from 'react-native';
 import NavigationService from '../navigation/NavigationService';
 import Dimen from '../res/Dimen';
@@ -18,7 +17,7 @@ type reduxstate = {
   userName: string,
 };
 
-const LandingScreen: () => Node = () => {
+const LandingScreen = () => {
   const [inputName, setInputName] = useState('');
   const [inputUserName, setInputUserName] = useState('');
   const [inputemail, setInputEmail] = useState('');
@@ -48,6 +47,8 @@ const LandingScreen: () => Node = () => {
     );
     setStateBlank();
   };
+
+  const sum = val => val + 10;
 
   const setStateBlank = () => {
     setInputEmail('');

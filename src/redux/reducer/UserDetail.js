@@ -1,4 +1,3 @@
-//@flow
 import type {Node} from 'react';
 import {SET_USER_DETAIL} from '../actions/types';
 

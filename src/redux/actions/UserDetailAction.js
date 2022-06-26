@@ -1,4 +1,3 @@
-//@flow
 import {SET_USER_DETAIL} from './types';
 
 type ActionParam = {
